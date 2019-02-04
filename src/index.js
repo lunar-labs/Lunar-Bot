@@ -14,13 +14,13 @@ client.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
   if(err) throw err;
-  let commandes = files.filter(f => f.split(".").pop() === "js");
-  if(commandes.length <= 0) return console.log("[Alert] No Commands Found.");
+  let commands = files.filter(f => f.split(".").pop() === "js");
+  if(commands.length <= 0) return console.log("[Alert] No Commands Found.");
 
-  commandes.forEach((f, i) =>{
-    let commande = require(`./commands/${f}`);
+  commands.forEach((f, i) =>{
+    let command = require(`./commands/${f}`);
     console.log(`[Command] ${f} Loaded!`);
-    client.commands.set(commande.help.name, commande);
+    client.commands.set(command.help.name, command);
   });
 });
 
