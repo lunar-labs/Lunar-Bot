@@ -15,11 +15,10 @@
     <a href="">Discord</a>
     <br>
     <br>
-    <img src="" />
-    <img src="" />
-    <img src="" />
-    <img src="" />
-    <img src="" />
+    <img src="https://img.shields.io/badge/Release-v0.1-blue.svg" />
+    <img src="https://img.shields.io/badge/Issues-0%20Open-yellow.svg" />
+    <img src="https://img.shields.io/badge/Javascript-34.3%25-yellow.svg" />
+    <img src="https://img.shields.io/discord/524669562608812051.svg?logo=discord" />
     
   </p>
 </div>
