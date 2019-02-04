@@ -13,13 +13,13 @@ module.exports.run = async(client, msg) => {
     return msg.reply("you need to mention someone first to punch them");
   }
 
-  return msg.channel.send(`${message.author} punched ${hugged}'s lights out!`, {
+  return msg.channel.send(`${msg.author} punched ${hugged}'s lights out!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
   });
 
 }
 
 module.exports.help = {
-    name : "kiss",
+    name : "punch",
     type: "User",
 }

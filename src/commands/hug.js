@@ -13,12 +13,12 @@ module.exports.run = async(client, msg) => {
         return msg.reply("you need to mention someone first to hug them");
     }
 
-    return msg.channel.send(`${message.author} gave ${hugged} a hug!`, {
+    return msg.channel.send(`${msg.author} gave ${hugged} a hug!`, {
         file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
     });
 }
 
 module.exports.help = {
-    name : "eval",
+    name : "hug",
     type: "Owner",
 }

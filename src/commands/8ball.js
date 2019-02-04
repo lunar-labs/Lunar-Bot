@@ -14,6 +14,6 @@ module.exports.run = async(client, msg) => {
 }
 
 module.exports.help = {
-    name : "eval",
+    name : "8ball",
     type: "Owner",
 }
