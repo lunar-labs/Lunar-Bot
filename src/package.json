@@ -1,5 +1,5 @@
 {
-  "name": "Lunar Bot",
+  "name": "lunarbot",
   "version": "0.0.1",
   "description": "Lunar is an actively developed Discord bot with involvement from our community and like minded developers. Unlike most other bots, we try to push the limits of what can be done with the Discord API and frequently test new and creative ideas.",
   "main": "index.js",
