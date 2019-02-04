@@ -1,12 +1,12 @@
 {
-  "name": "Dashboard.io",
+  "name": "Lunar Bot",
   "version": "0.0.1",
-  "description": "Bot et dashboard créé par Sworder",
+  "description": "Lunar is an actively developed Discord bot with involvement from our community and like minded developers. Unlike most other bots, we try to push the limits of what can be done with the Discord API and frequently test new and creative ideas.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sworder",
+  "author": "Lunar Labs",
   "license": "GPL-3.0",
   "dependencies": {
     "discord.js": "^11.3.2",
