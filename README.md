@@ -6,9 +6,9 @@
     <a href="">Explore The Docs »</a>
     <br>
     <br>
-    <a href="">Report bug</a>
+    <a href="https://github.com/lunar-labs/Lunar-Bot/issues/new?assignees=&labels=&template=bug_report.md&title=">Report bug</a>
     ·
-    <a href="">Request feature</a>
+    <a href="https://github.com/lunar-labs/Lunar-Bot/issues/new?assignees=&labels=&template=feature_request.md&title=">Request feature</a>
     ·
     <a href="">Website</a>
     ·
