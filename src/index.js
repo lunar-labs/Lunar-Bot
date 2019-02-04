@@ -12,13 +12,13 @@ client.website = require("./website/dashboard");
 client.config = config;
 client.commands = new Discord.Collection();
 
-fs.readdir("./commandes/", (err, files) => {
+fs.readdir("./commands/", (err, files) => {
   if(err) throw err;
   let commandes = files.filter(f => f.split(".").pop() === "js");
   if(commandes.length <= 0) return console.log("[Alert] No Commands Found.");
 
   commandes.forEach((f, i) =>{
-    let commande = require(`./commandes/${f}`);
+    let commande = require(`./commands/${f}`);
     console.log(`[Command] ${f} Loaded!`);
     client.commands.set(commande.help.name, commande);
   });
