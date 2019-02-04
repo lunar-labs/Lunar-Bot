@@ -63,3 +63,5 @@ typings/
 #config files
 config.json
 config
+
+src/package-lock\.json
