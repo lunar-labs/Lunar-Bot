@@ -1,0 +1,7 @@
+{
+	"BOT_OWNER_ID": "123456789",
+	"BOT_TOKEN": "shhh",
+	"BOT_PREFIX": "}",
+	"CLIENT_SECRET": "shhh",
+	"WEBSITE_URL": "http://localhost:3000"
+}
