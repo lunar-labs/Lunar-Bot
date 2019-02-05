@@ -12,6 +12,7 @@ module.exports.run = async (client, msg) => {
     .addField("kiss", "gives a user a kiss")
     .addField("punch", "punches a user")
 	.setFooter(`Beta Lunar © 2019`)
+    .setTimestamp();
      msg.channel.send(`Hello! **${msg.author.username}** !`, embed);
 
 }
