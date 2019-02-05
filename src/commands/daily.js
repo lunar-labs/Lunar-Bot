@@ -11,7 +11,7 @@ module.exports.run = async(client, msg) => {
                     money.updateBal(msg.author.id, 500).then((i) => {
                         msg.channel.send({embed: {
                             color: 3447003,
-                            description: 'Recieved your **$500** \`-daily`\. I think you should check \`-money\`.',
+                            description: 'You have recieved your \`-daily`\. **$500**',
                             author: {
                             name: `${msg.author.username}#${msg.author.discriminator}`, icon_url: msg.author.avatarURL 
                             }
@@ -21,7 +21,7 @@ module.exports.run = async(client, msg) => {
             else {
                 msg.channel.send({embed: {
                     color: 3447003,
-                    description: 'You already recieved your \`-daily`\. Check later **' + moment().endOf('day').fromNow() + '**.',
+                    description: 'You have already recieved your \`-daily`\. Try again **' + moment().endOf('day').fromNow() + '**.',
                     author: {
                     name: `${msg.author.username}#${msg.author.discriminator}`, icon_url: msg.author.avatarURL 
                     }
