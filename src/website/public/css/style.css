@@ -190,3 +190,10 @@
         background-color: rgba(240,71,71,.3);
         border-color: #f04747;
       }
+
+    @media (min-width: 992px){
+      .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+      }
+    }
