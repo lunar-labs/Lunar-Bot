@@ -5,7 +5,7 @@ const CheckAuth = require('../auth/CheckAuth');
 
 router.get("/", function(req, res) { 
     res.render("index.ejs", {
-        status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Se connecter"),
+        status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Login"),
         client: req.client.server.client.user,
         user: req.user,
         login: (req.isAuthenticated() ? "oui" : "non"),
