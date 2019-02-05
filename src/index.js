@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const money = require('discord-money');
 const client = new Discord.Client({
   disableEveryone: true,
   fetchAllMembers: true
