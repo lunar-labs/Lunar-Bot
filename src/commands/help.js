@@ -5,9 +5,14 @@ module.exports.run = async (client, msg) => {
     let embed = new Discord.RichEmbed()
 	.setThumbnail(client.user.avatarURL)
 	.setColor(0xffffff)
-	.setDescription("Welcome to Lunar Beta!")
-	.setFooter(`Beta Lunar © 2019`)
-
+    .setTitle("Welcome to Lunar Beta!")
+    .setDescription("Commands")
+    .addField("8ball", "8-Ball reaches into the future, to find the answers to your questions")
+    .addField("hug", "gives a user a hug")
+    .addField("kiss", "gives a user a kiss")
+    .addField("punch", "punches a user")
+    .setFooter(`Beta Lunar © 2019`)
+    .setTimestamp();
      msg.channel.send(`Hello! **${msg.author.username}** !`, embed);
 
 }
