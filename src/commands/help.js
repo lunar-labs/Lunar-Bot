@@ -11,11 +11,7 @@ module.exports.run = async (client, msg) => {
     .addField("hug", "gives a user a hug")
     .addField("kiss", "gives a user a kiss")
     .addField("punch", "punches a user")
-<<<<<<< Updated upstream
     .setFooter(`Beta Lunar © 2019`)
-=======
-	.setFooter(`Beta Lunar © 2019`)
->>>>>>> Stashed changes
     .setTimestamp();
      msg.channel.send(`Hello! **${msg.author.username}** !`, embed);
 
