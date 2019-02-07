@@ -1,12 +1,12 @@
-language: node_js
 sudo: true
-node_js:
- - 10.15.1
- cache:
+language: node_js
+cache:
   directories:
-    - "node_modules"
-install:
-  - apt update
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '10'
+before_install:
+  - sudo apt update
   - cd src && npm i
-script:
-  - node index.js
