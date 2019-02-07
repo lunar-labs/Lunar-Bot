@@ -10,6 +10,7 @@ node_js:
 before_install:
   - sudo apt update
   - cd src && npm i
+  - npm i -g --add-python-to-path --vs2015 --production windows-build-tools
 script:
   - npm test
 after_success:
