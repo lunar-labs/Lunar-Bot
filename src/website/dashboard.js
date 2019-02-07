@@ -47,7 +47,7 @@ module.exports.load = async(client) => {
   .use(passport.session())
   .use("/", require("./router/index"))
   .use("/profile", require("./router/profile"))
-  .use("/serveurs", require("./router/serveurs"))
+  .use("/Servers", require("./router/servers"))
   .get("*", function(req, res) {
     res.redirect("/");
   });

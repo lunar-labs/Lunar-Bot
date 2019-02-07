@@ -4,7 +4,7 @@ const CheckAuth = require('../auth/CheckAuth');
 
 router.get('/', CheckAuth, async(req, res) => {
     res.render("profile.ejs", {
-        status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Loginr"),
+        status: (req.isAuthenticated() ? `${req.user.username}#${req.user.discriminator}` : "Login"),
         client: req.client.server.client.user,
         user: req.user,
         guilds: req.user.guilds.filter(u => (u.permissions & 2146958591) === 2146958591),

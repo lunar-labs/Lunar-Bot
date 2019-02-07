@@ -15,11 +15,11 @@ router.get("/:guildID", CheckAuth, (req, res) => {
         guild: serv,
       });
 })
-    .post("/:guildID", CheckAuth, async function(req, res) { 
-        if(!req.body.send_CHANNELID || req.body.send_CHANNELID === "NOT_SET") return res.send("Erreur, pas de salon spécifié");
-        if(!req.body.send_MESSAGE || req.body.send_MESSAGE.length === 0) return res.send("Erreur, pas de message spécifié");
+    .post("/:guildID", CheckAuth, async function(req, res) {
+        if(!req.body.send_CHANNELID || req.body.send_CHANNELID === "NOT_SET") return res.send("Error, No Channel Selected");
+        if(!req.body.send_MESSAGE || req.body.send_MESSAGE.length === 0) return res.send("Error, not specified message");
         await req.client.server.client.guilds.get(req.params.guildID).channels.get(req.body.send_CHANNELID).send(req.body.send_MESSAGE);
-        await res.redirect(`/serveurs/${req.params.guildID}`);
+        await res.redirect(`/servers/${req.params.guildID}`);
     });
 
 module.exports = router;
