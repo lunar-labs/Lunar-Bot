@@ -1,11 +1,12 @@
+sudo: true
 language: node_js
-node_js:
-  - "stable"
- cache:
+cache:
   directories:
-    - "node_modules"
-install:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '10'
+before_install:
   - apt update
   - cd src && npm i
-script:
-  - node index.js
