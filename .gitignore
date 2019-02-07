@@ -65,3 +65,5 @@ config.json
 config
 
 src/package-lock\.json
+
+src/config\.js
