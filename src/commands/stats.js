@@ -1,28 +1,29 @@
-const Discord = require("discord.js");
+const { version } = require("discord.js");
+const moment = require("moment");
+require("moment-duration-format");
 
-module.exports.run = async(client, msg) => {
-    let totalSeconds = (client.uptime / 1000);
-    let days = Math.floor(totalSeconds / 86400);
-    let hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-    
-    let embed = new Discord.RichEmbed()
-	.setThumbnail(client.user.avatarURL)
-	.setColor(0xffffff)
-    .setTitle(`Lunar | V0.1`)
-    .addField(`Guilds`, `${client.guilds.size}`, true)
-    .addField(`uptime`, `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`, true)
-    .addField(`Channels`, `${client.channels.size}`, true)
-    .addField(`Users`, `${client.users.size}`, true)
-    .setFooter(`Beta Lunar © 2019`)
-    .setTimestamp();
-     msg.channel.send(embed);
-    
-}
+exports.run = (client, message, args, level) => { // eslint-disable-line no-unused-vars
+  const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+  message.channel.send(`= STATISTICS =
+• Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+• Uptime     :: ${duration}
+• Users      :: ${client.users.size.toLocaleString()}
+• Servers    :: ${client.guilds.size.toLocaleString()}
+• Channels   :: ${client.channels.size.toLocaleString()}
+• Discord.js :: v${version}
+• Node       :: ${process.version}`, {code: "asciidoc"});
+};
 
-module.exports.help = {
-    name : "stats",
-    type: "bot",
-}
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
+
+exports.help = {
+  name: "stats",
+  category: "Miscelaneous",
+  description: "Gives some useful bot statistics",
+  usage: "stats"
+};

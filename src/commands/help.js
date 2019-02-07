@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, msg) => {
+module.exports.run = async (client, message) => {
 
     let embed = new Discord.RichEmbed()
 	.setThumbnail(client.user.avatarURL)
@@ -13,11 +13,20 @@ module.exports.run = async (client, msg) => {
     .addField("punch", "punches a user")
     .setFooter(`Beta Lunar © 2019`)
     .setTimestamp();
-     msg.channel.send(`Hello! **${msg.author.username}** !`, embed);
+     message.channel.send(`Hello! **${message.author.username}** !`, embed);
 
-}
+};
 
-module.exports.help = {
-    name : "help",
-    type: "bot",
-}
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
+
+exports.help = {
+  name: "help",
+  category: "Miscelaneous",
+  description: "help!",
+  usage: "help"
+};
