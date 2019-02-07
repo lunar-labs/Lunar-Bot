@@ -8,5 +8,5 @@ notifications:
 node_js:
   - '10'
 before_install:
-  - apt update
+  - sudo apt update
   - cd src && npm i
