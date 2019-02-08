@@ -1,6 +1,6 @@
 const config = {
 	"CLIENT_SECRET": "oPtJm7Z_Pr6kzsUID7R7ETVt_RT3adhV",
-	"WEBSITE_URL": "http://localhost:3000"
+	"WEBSITE_URL": "http://localhost:3000",
   // Bot Owner, level 10 by default. A User ID. Should never be anything else than the bot owner's ID.
   "ownerID": "355785895724449792",
 
