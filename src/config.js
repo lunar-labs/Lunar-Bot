@@ -1,8 +1,8 @@
 const config = {
-	"CLIENT_SECRET": "shhh",
-	"WEBSITE_URL": "http://localhost"
+	"CLIENT_SECRET": "oPtJm7Z_Pr6kzsUID7R7ETVt_RT3adhV",
+	"WEBSITE_URL": "http://localhost:3000"
   // Bot Owner, level 10 by default. A User ID. Should never be anything else than the bot owner's ID.
-  "ownerID": "123456789123456",
+  "ownerID": "355785895724449792",
 
   // Bot Admins, level 9 by default. Array of user ID strings.
   "admins": [],
@@ -11,7 +11,7 @@ const config = {
   "support": [],
 
 
-  "token": "shhh",
+  "token": "NTQzNTU2NTIxMDgzMjczMjQ4.Dz-SSw.mHlD1_e7mT5A_48sC8d2Wb3aIcE",
   "defaultSettings" : {
     "prefix": "-",
     "modLogChannel": "mod-log",
