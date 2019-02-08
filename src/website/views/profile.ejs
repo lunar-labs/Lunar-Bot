@@ -63,7 +63,7 @@
               <div class="serv-container">
           <% guilds.forEach((guild) => { %>
                <div title="<%= guild.name %>">
-              <a href="/serveurs/<%= guild.id %>">
+              <a href="/servers/<%= guild.id %>">
           <% if (guild.icon) { %>
               <img src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" width="70px" height="70px" class="guild-icon" />
           <% } else { %>

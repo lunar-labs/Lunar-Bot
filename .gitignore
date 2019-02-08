@@ -69,3 +69,4 @@ src/package-lock\.json
 src/config\.js
 
 src/data/
+.remote-sync.json
