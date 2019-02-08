@@ -11,7 +11,7 @@ const config = {
   "support": [],
 
 
-  "token": "NTQzNTU2NTIxMDgzMjczMjQ4.Dz-SSw.mHlD1_e7mT5A_48sC8d2Wb3aIcE",
+  "token": "",
   "defaultSettings" : {
     "prefix": "-",
     "modLogChannel": "mod-log",
