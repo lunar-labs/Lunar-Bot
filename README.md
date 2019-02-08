@@ -17,7 +17,7 @@
     <br>
     <img src="https://img.shields.io/badge/Release-v0.1.0-blue.svg" />
     <img src="https://img.shields.io/badge/Issues-0%20Open-yellow.svg" />
-    <img src="https://img.shields.io/badge/Javascript-34.3%25-yellow.svg" />
+    <img src="https://img.shields.io/badge/Javascript-58.6%25-yellow.svg" />
     <img src="https://img.shields.io/discord/541798716995141642.svg?logo=discord" />
     
   </p>
