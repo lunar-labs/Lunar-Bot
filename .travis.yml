@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get install build-essential
   - cd src && npm i
 script:
-  - npm test
+  - node index.js
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
