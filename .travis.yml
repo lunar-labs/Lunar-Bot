@@ -9,8 +9,8 @@ node_js:
   - '10'
 before_install:
   - sudo apt update
+  - sud0 apt-get install build-essential
   - cd src && npm i
-  - apt install build-essential
 script:
   - npm test
 after_success:
