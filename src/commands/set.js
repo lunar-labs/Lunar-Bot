@@ -1,4 +1,4 @@
-exports.run = async (client, message, [action, key, ...value], level) => { // eslint-disable-line no-unused-vars
+module.exports.run = async (client, message, [action, key, ...value], level) => { // eslint-disable-line no-unused-vars
 
   // Retrieve current guild settings (merged) and overrides only.
   const settings = message.settings;

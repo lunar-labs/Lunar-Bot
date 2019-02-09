@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const money = require('discord-money');
 
 module.exports.run = async(client, message) => {
-    
+
     if (!message.guild.usersAFK) message.guild.usersAFK = [];
     if (message.guild.usersAFK.includes(message.author.id)) return;
-    
+
     message.guild.usersAFK.push(message.author.id);
-    
+
     await message.channel.send({
     embed: {
       color: 3447003,
