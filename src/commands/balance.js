@@ -15,8 +15,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "money",
+  name: "balance",
   category: "Miscelaneous",
   description: "check your balance",
-  usage: "money"
+  usage: "balance"
 };
