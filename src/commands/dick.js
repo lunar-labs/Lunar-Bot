@@ -12,6 +12,16 @@ else {
 }
 
 }
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
+
 exports.help = {
-name: "{tag}"
-}
+  name: "dick",
+  category: "nsfw",
+  description: "dick",
+  usage: "dick"
+};
