@@ -66,7 +66,8 @@ typings/
 
 src/package-lock\.json
 
-src/config\.js
+src/config.js
+src/events/debug.js
 
 src/data/
 .remote-sync.json
