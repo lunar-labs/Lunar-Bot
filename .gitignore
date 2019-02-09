@@ -61,8 +61,8 @@ typings/
 .next
 
 #config files
-config.js
-config
+.config.js
+.config
 
 src/package-lock\.json
 
