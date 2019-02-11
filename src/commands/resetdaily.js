@@ -2,9 +2,12 @@ const Discord = require("discord.js");
 const moment = require('moment');
 const eco = require('discord-economy');
 module.exports.run = async(client, message) => {
-message.delete();
-var output = await eco.FetchBalance(message.author.id)
- message.channel.send(`Hey ${message.author.tag}! You own ${output.balance} coins.`);
+var user = var user = message.mentions.users.first()
+
+  var output = await eco.ResetDaily(user)
+
+message.reply(output) //It wil send 'Daily Reset.'
+
 
 };
 
@@ -12,12 +15,12 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: "user"
+  permLevel: "Owner"
 };
 
 exports.help = {
-  name: "balance",
+  name: "resetdaily",
   category: "fun",
-  description: "coin balance",
-  usage: "balance"
+  description: "reset users daily",
+  usage: "resetdaily"
 };
