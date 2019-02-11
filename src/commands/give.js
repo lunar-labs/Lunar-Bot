@@ -23,7 +23,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "stats",
+  name: "give",
   category: "Miscelaneous",
   description: "Gives some money",
   usage: "give"
