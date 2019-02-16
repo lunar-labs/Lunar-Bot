@@ -1,18 +1,16 @@
 const config = {
-	"CLIENT_SECRET": "",
-	"WEBSITE_URL": "http://localhost:3000",
-  // Bot Owner, level 10 by default. A User ID. Should never be anything else than the bot owner's ID.
-  "ownerID": "",
-
-  // Bot Admins, level 9 by default. Array of user ID strings.
+	"ownerID": "#",
   "admins": [],
-
-  // Bot Support, level 8 by default. Array of user ID strings
   "support": [],
-
-
-  "token": "",
-  "defaultSettings" : {
+  "token": "#",
+  "dashboard" : {
+    "oauthSecret": "#",
+    "callbackURL": "#/callback",
+    "sessionSecret": "#",
+    "domain": "#",
+    "port": "3000"//
+  },
+	"defaultSettings" : {
     "prefix": "-",
     "modLogChannel": "mod-log",
     "modRole": "Moderator",
@@ -22,6 +20,42 @@ const config = {
     "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
     "welcomeEnabled": "false"
   },
+	"bumpSettings" : {
+    "bumpChannel": "Bump",
+    "bumpMessage" : "Welcome To The Server",
+    "bumpEnabled" : "false"
+  },
+	"commandsSettings" : {
+		"8ball" : "true",
+		"afk" : "true",
+		"amateur" : "true",
+		"ass" : "true",
+		"balance" : "true",
+		"bdsm" : "true",
+		"boobs" : "true",
+		"catgirl" : "true",
+		"coinflip" : "true",
+		"daily" : "true",
+		"dash" : "true",
+		"dick" : "true",
+		"ecchi" : "true",
+		"eval" : "false",
+		"futa" : "true",
+		"give" : "true",
+		"help" : "true",
+		"hentai" : "true",
+		"hug" : "true",
+		"kiss" : "true",
+		"logout" : "true",
+		"moneyboard" : "true",
+		"punch" : "true",
+		"reload" : "true",
+		"resetdaily" : "true",
+		"set" : "true",
+		"stats" : "true",
+		"work" : "true",
+
+	}
   permLevels: [
     // This is the lowest permisison level, this is for non-roled users.
     { level: 0,

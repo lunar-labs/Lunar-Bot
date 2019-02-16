@@ -3,10 +3,9 @@ const moment = require('moment');
 const eco = require('discord-economy');
 module.exports.run = async(client, message) => {
 var user = var user = message.mentions.users.first()
+var output = await eco.ResetDaily(user);
 
-  var output = await eco.ResetDaily(user)
-
-message.reply(output) //It wil send 'Daily Reset.'
+message.reply(output); //It wil send 'Daily Reset.'
 
 
 };
