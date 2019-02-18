@@ -8,7 +8,7 @@ if (!message.channel.nsfw) {
   message.channel.send({file: res.url});
    });
 
-};
+}
 
 };
 exports.conf = {

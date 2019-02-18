@@ -12,7 +12,7 @@ module.exports.run = async(client, message) => {
   message.reply(`You claimed your daily coins succesfully! You now own ${profile.newbalance} coins.`);
 } else {
   message.channel.send(`Sorry, you already claimed your daily coins!\nBut no worries, over ${output.timetowait} you can daily again!`);
-};
+}
 
 
 };

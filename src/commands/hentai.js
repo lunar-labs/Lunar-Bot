@@ -7,7 +7,8 @@ if (!message.channel.nsfw) {
   api.nsfw.hentai().then(res => {
   message.channel.send({file: res.url});
    });
-};
+}
+    
 };
 exports.conf = {
   enabled: true,
