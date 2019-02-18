@@ -7,7 +7,7 @@ module.exports.run = async(client, message) => {
       "ask again why don't you",
       "I'd say that would be no",
       "Yes Yes now leave me alone",
-    ]
+    ];
     const random = rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 
     return message.channel.send(`${random}`);
