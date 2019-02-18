@@ -5,9 +5,9 @@ module.exports.run = async(client, message) => {
 
   let hugged = message.mentions.members.first();
   const rando_imgs = [
-      'https://media.giphy.com/media/okECPQ0lVQeD6/giphy.gif',
-      'https://media.giphy.com/media/Z5zuypybI5dYc/giphy.gif',
-      'https://media.giphy.com/media/ryxGBGURsirNC/giphy.gif',
+      "https://media.giphy.com/media/okECPQ0lVQeD6/giphy.gif",
+      "https://media.giphy.com/media/Z5zuypybI5dYc/giphy.gif",
+      "https://media.giphy.com/media/ryxGBGURsirNC/giphy.gif",
   ]
   if (!hugged) {
     return message.reply("you need to mention someone first to punch them");
