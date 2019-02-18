@@ -11,7 +11,6 @@ const client = new Discord.Client();
 const eco = require('discord-economy');
 //Loading Config
 client.config = require("./config.js");
-client.logger = require("./modules/Logger");
 require("./modules/functions.js")(client);
 client.eco = eco;
 client.commands = new Enmap();
@@ -22,7 +21,7 @@ client.settings = new Enmap({provider: new EnmapLevel({name: "settings"})});
 const init = async () => {
   //commands
   const cmdFiles = await readdir("./commands/");
-  client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
+  client.log(`Loading a total of ${cmdFiles.length} commands.`);
   cmdFiles.forEach(f => {
     if (!f.endsWith(".js")) return;
     const response = client.loadCommand(f);
@@ -30,10 +29,10 @@ const init = async () => {
   });
   //events
   const evtFiles = await readdir("./events/");
-  client.logger.log(`Loading a total of ${evtFiles.length} events.`);
+  client.log(`Loading a total of ${evtFiles.length} events.`);
   evtFiles.forEach(file => {
     const eventName = file.split(".")[0];
-    client.logger.log(`Loading Event: ${eventName}`);
+    client.log(`Loading Event: ${eventName}`);
     const event = require(`./events/${file}`);
     client.on(eventName, event.bind(null, client));
   });

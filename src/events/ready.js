@@ -14,7 +14,7 @@ module.exports = async client => {
   client.settings.set("default", client.config.defaultSettings);
 }
 require("../modules/dashboard")(client);
-  client.logger.log(`${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
+  client.log(`${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
 
   await client.user.setActivity(`${client.config.defaultSettings.prefix}help`, {type: "PLAYING"});
 };

@@ -1,10 +1,5 @@
 
 module.exports = (client, guild) => {
-  client.logger.cmd(`[GUILD LEAVE] ${guild.name} (${guild.id}) removed the bot.`);
-
-  // If the settings Enmap contains any guild overrides, remove them.
-  // No use keeping stale data!
-  if (client.settings.has(guild.id)) {
-    client.settings.delete(guild.id);
-  }
+  client.user.setPresence({game: {name: `${client.settings.get("default").prefix}help | ${client.guilds.size} Servers`, type:0}});
+  client.settings.delete(guild.id);
 };
