@@ -28,7 +28,7 @@ module.exports.run = async(client, message) => {
   2 - ${secondplace && secondplace.tag || 'Nobody Yet'} : ${users[1] && users[1].balance || 'None'}
   3 - ${thirdplace && thirdplace.tag || 'Nobody Yet'} : ${users[2] && users[2].balance || 'None'}`)
 
-        })
+        });
 
       }
 
