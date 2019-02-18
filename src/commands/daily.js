@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const moment = require('moment');
-const eco = require('discord-economy');
+const moment = require("moment");
+const eco = require("discord-economy");
 module.exports.run = async(client, message) => {
 
 
@@ -8,12 +8,11 @@ module.exports.run = async(client, message) => {
         var output = await eco.Daily(message.author.id)
         if (output.updated) {
 
-  var profile = await eco.AddToBalance(message.author.id, 100)
+  var profile = await eco.AddToBalance(message.author.id, 100);
   message.reply(`You claimed your daily coins succesfully! You now own ${profile.newbalance} coins.`);
-
 } else {
-  message.channel.send(`Sorry, you already claimed your daily coins!\nBut no worries, over ${output.timetowait} you can daily again!`)
-}
+  message.channel.send(`Sorry, you already claimed your daily coins!\nBut no worries, over ${output.timetowait} you can daily again!`);
+};
 
 
 };

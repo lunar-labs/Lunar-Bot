@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
-const moment = require('moment');
-const eco = require('discord-economy');
+const moment = require("moment");
+const eco = require("discord-economy");
 module.exports.run = async(client, message) => {
 message.delete();
-var output = await eco.FetchBalance(message.author.id)
+var output = await eco.FetchBalance(message.author.id);
  message.channel.send(`Hey ${message.author.tag}! You own ${output.balance} coins.`);
 
 };

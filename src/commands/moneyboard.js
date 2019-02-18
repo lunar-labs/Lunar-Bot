@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const moment = require('moment');
-const eco = require('discord-economy');
+const moment = require("moment");
+const eco = require("discord-economy");
 module.exports.run = async(client, message) => {
 
   if (message.mentions.users.first()) {
@@ -38,7 +38,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: "bot"
+  permLevel: "User"
 };
 
 exports.help = {

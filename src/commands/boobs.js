@@ -1,4 +1,4 @@
-let api = require('nekos-image-api');//get the api
+let api = require("nekos-image-api");//get the api
 
 module.exports.run = (client, message) => {
 if (!message.channel.nsfw) {

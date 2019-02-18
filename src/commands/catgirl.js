@@ -1,4 +1,4 @@
-let api = require('nekos-image-api');//get the api
+let api = require("nekos-image-api");//get the api
 
 module.exports.run = (client, message) => {
 if (!message.channel.nsfw) {
@@ -21,7 +21,7 @@ exports.conf = {
 
 exports.help = {
   name: "catgirl",
-  category: "Fun",
+  category: "nsfw",
   description: "catgirl",
   usage: "catgirl"
 };
