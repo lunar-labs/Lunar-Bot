@@ -1,19 +1,18 @@
 const Discord = require("discord.js");
-const moment = require('moment');
-const eco = require('discord-economy');
+const moment = require("moment");
+const eco = require("discord-economy");
 module.exports.run = async(client, message) => {
 message.delete();
   var output = await eco.Work(message.author.id, {
     failurerate: 10,
     money: Math.floor(Math.random() * 500),
-    jobs: ['cashier', 'shopkeeper']
-  })
+    jobs: ["Labor", "Cook", "fisherman"]
+  });
   //10% chance to fail and earn nothing. You earn between 1-500 coins. And you get one of those 3 random jobs.
-  if (output.earned == 0) return message.reply('Aww, you did not do your job well so you earned nothing!')
+  if (output.earned === 0) return message.reply("Aww, you did not do your job well so you earned nothing!");
 
-  message.channel.send(`**${message.author.username}**
-You worked as a \` ${output.job} \` and earned :money_with_wings: ${output.earned}
-You now own :money_with_wings: ${output.balance}`)
+  message.channel.send(`**${message.author.username}** You worked as a \` ${output.job} \` and earned :money_with_wings: ${output.earned}
+You now own :money_with_wings: ${output.balance}`);
 
 
 };
