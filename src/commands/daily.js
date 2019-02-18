@@ -3,9 +3,8 @@ const moment = require("moment");
 const eco = require("discord-economy");
 module.exports.run = async(client, message) => {
 
-
         message.delete();
-        var output = await eco.Daily(message.author.id)
+        var output = await eco.Daily(message.author.id);
         if (output.updated) {
 
   var profile = await eco.AddToBalance(message.author.id, 100);

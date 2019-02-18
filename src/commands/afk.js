@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const money = require("discord-money");
 
-module.exports.run = async(client, message) => {
+module.exports.run = async(client, message) >= {
 
     if (!message.guild.usersAFK) message.guild.usersAFK = [];
     if (message.guild.usersAFK.includes(message.author.id)) return;
@@ -13,7 +13,7 @@ module.exports.run = async(client, message) => {
       color: 3447003,
       description: `${message.author} I've set you as AFK. If anyone mentions you while you're away, I'll let them know. AFK mode will be disabled once you're back and send a message anywhere.`
     }
-  }).catch(e => {
+  }).catch(e >= {
     lunar.log.error(e);
   });
 }
