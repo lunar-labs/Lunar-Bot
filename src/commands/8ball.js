@@ -3,12 +3,12 @@ const util = require("util");
 
 module.exports.run = async(client, message) => {
 
-    const rando_imgs = [
+    const randomImages = [
       "ask again why don't you",
       "I'd say that would be no",
       "Yes Yes now leave me alone",
-    ]
-    const random = rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+    ];
+    const random = randomImages[Math.floor(Math.random() * randomImages.length)]
 
     return message.channel.send(`${random}`);
 };

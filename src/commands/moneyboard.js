@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 const eco = require("discord-economy");
-module.exports.run = async(client, message) => {
+module.exports.run = async(client, message) =>{
 
   if (message.mentions.users.first()) {
 
@@ -28,7 +28,7 @@ module.exports.run = async(client, message) => {
   2 - ${secondplace && secondplace.tag || 'Nobody Yet'} : ${users[1] && users[1].balance || 'None'}
   3 - ${thirdplace && thirdplace.tag || 'Nobody Yet'} : ${users[2] && users[2].balance || 'None'}`)
 
-        })
+        });
 
       }
 

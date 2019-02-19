@@ -15,7 +15,7 @@ module.exports.run = async(client, message) => {
       var output = await eco.FetchBalance(message.author.id)
       if (output.balance < amount){
         return message.reply("You have less coins than the amount you want to transfer!");
-      };
+      }
       var transfer = await eco.Transfer(message.author.id, user.id, amount)
     return message.reply(`Transfering coins succesfully done!\nBalance from ${message.author.tag}: ${transfer.FromUser}\nBalance from ${user.tag}: ${transfer.ToUser}`);
 };

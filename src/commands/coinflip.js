@@ -12,7 +12,7 @@ module.exports.run = async(client, message, args) => {
      if (!amount){
         return message.reply('Specify the amount you want to gamble!');
       };
-     var output = await eco.FetchBalance(message.author.id)
+     var output = await eco.FetchBalance(message.author.id);
      if (output.balance < amount) {
        return message.reply('You have less coins than the amount you want to gamble!')
      };

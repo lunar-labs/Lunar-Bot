@@ -55,7 +55,7 @@ const config = {
 		"stats" : "true",
 		"work" : "true",
 
-	}
+	},
   permLevels: [
     // This is the lowest permisison level, this is for non-roled users.
     { level: 0,
