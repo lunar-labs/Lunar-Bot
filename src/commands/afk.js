@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const money = require("discord-money");
 
 module.exports.run = async(client, message) >= {
 
