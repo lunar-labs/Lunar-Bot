@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
-module.exports.run = async(client, message) >= {
+module.exports.run = async(client, message) => {
 
-    if (!message.guild.usersAFK) message.guild.usersAFK = [];
+    //if (!message.guild.usersAFK) message.guild.usersAFK = [];
     if (message.guild.usersAFK.includes(message.author.id)) return;
 
     message.guild.usersAFK.push(message.author.id);
