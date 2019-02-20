@@ -7,6 +7,7 @@ module.exports.run = async(client, message) => {
       "ask again why don't you",
       "I'd say that would be no",
       "Yes Yes now leave me alone",
+      "no u",
     ];
     const random = randomImages[Math.floor(Math.random() * randomImages.length)]
 
