@@ -1,18 +1,6 @@
 const { inspect } = require("util");
 
-// This command is to modify/edit guild configuration. Perm Level 3 for admins
-// and owners only. Used for changing prefixes and role names and such.
-
-// Note that there's no "checks" in this basic version - no config "types" like
-// Role, String, Int, etc... It's basic, to be extended with your deft hands!
-
-// Note the **destructuring** here. instead of `args` we have :
-// [action, key, ...value]
-// This gives us the equivalent of either:
-// const action = args[0]; const key = args[1]; const value = args.slice(2);
-// OR the same as:
-// const [action, key, ...value] = args;
-exports.run = async (client, message, [action, key, ...value], level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, [action, key, ...value], level) => {
 
   // Retrieve current guild settings
   const settings = message.settings;
