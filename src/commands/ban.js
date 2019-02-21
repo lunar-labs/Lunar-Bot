@@ -3,7 +3,10 @@ const util = require("util");
 
 module.exports.run = async(client, message, args) => {
     try{
-      if(!message.member.guild.me.hasPermission("BAN_MEMBER")){
+      if(!message.mentions.members.first()){
+        return message.reply("You Need to Mention Someone first!");
+      }
+      if(!message.member.guild.me.hasPermission("BAN_MEMBERS")){
         return message.reply("i don't have permisson to do that")
       }
       let reason = await args.slice(1).join(" ");
@@ -12,11 +15,7 @@ module.exports.run = async(client, message, args) => {
       if (!reason) {
         return message.reply("You Need A Reason to Ban This Person Sorry!");
       }
-      if (!member) {
-        return message.reply("you need to mention someone first in order for me to find them");
-      }
-
-      member.ban(reason)
+        member.ban(reason)
       return message.channel.send("success!");
     }catch (e) {
         console.error(e);

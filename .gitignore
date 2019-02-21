@@ -71,3 +71,4 @@ src/events/debug.js
 
 src/data/
 .remote-sync.json
+.push.settings.jsonc
