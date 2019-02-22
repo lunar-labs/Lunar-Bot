@@ -26,7 +26,7 @@ exports.conf = {
 
 exports.help = {
   name: "apex-champions",
-  category: "Games",
+  category: "Apex",
   description: "Apex Legends",
   usage: "apex-champions"
 };
