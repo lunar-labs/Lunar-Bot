@@ -46,7 +46,7 @@ exports.conf = {
 
 exports.help = {
   name: "apex-weapons",
-  category: "Games",
+  category: "Apex",
   description: "Apex Legends",
   usage: "apex-weapons"
 };
