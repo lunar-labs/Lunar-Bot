@@ -61,8 +61,8 @@ typings/
 .next
 
 #config files
-.config.js
-.config
+config.js
+*config
 
 src/package-lock\.json
 
@@ -72,4 +72,5 @@ src/events/debug.js
 src/data/
 .remote-sync.json
 .push.settings.jsonc
+src/config.js
 src/config.js

@@ -1,17 +1,13 @@
-const Discord = require("discord.js");
-const util = require("util");
+module.exports.run = (client, message) => {
+  const randomImages = [
+    "ask again why don't you",
+    "I'd say that would be no",
+    "Yes Yes now leave me alone",
+    "no u",
+  ];
+  const random = randomImages[Math.floor(Math.random() * randomImages.length)];
 
-module.exports.run = async(client, message) => {
-
-    const randomImages = [
-      "ask again why don't you",
-      "I'd say that would be no",
-      "Yes Yes now leave me alone",
-      "no u",
-    ];
-    const random = randomImages[Math.floor(Math.random() * randomImages.length)]
-
-    return message.channel.send(`${random}`);
+  return message.channel.send(`${random}`);
 };
 
 exports.conf = {

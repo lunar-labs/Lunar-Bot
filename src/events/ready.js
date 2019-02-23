@@ -11,10 +11,14 @@ module.exports = async (client) => {
     if (!client.config.defaultSettings) throw new Error("defaultSettings not preset in config.js or settings database. Bot cannot load.");
     client.settings.set("default", client.config.defaultSettings);
   }
+  if (!client.commandsettings.has("commandsSettings")) {
+    if (!client.config.commandsSettings) throw new Error("commandsSettings not preset in config.js or settings database. Bot cannot load.");
+    client.commandsettings.set("commandsSettings", client.config.commandsSettings);
+  }
 
   require("../modules/dashboard")(client);
 
-  client.user.setPresence({game: {name: `${client.settings.get("default").prefix}help | ${client.guilds.size} Servers`, type:0}});
+  client.user.setPresence({game: {name: `Working On Improving Myself | ${client.guilds.size} Servers`, type:1}});
 
   client.log("log", `${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "Ready!");
 };

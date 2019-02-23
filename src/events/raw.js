@@ -1,5 +1,5 @@
-module.exports = async (raw) => {
-  // We don't want this to run on unrelated packets
+// eslint-disable-next-line no-unused-vars
+module.exports =  (client, raw, packet) => {
   // if (!["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"].includes(packet.t)) return;
   // // Grab the channel to check the message from
   // const channel = client.channels.get(packet.d.channel_id);
