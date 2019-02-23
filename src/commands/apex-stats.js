@@ -50,7 +50,7 @@ module.exports.run = (client, message, args) => {
         .setTitle("Apex User Lookup Result")     
         .setColor(0x00AE86)       
         .setThumbnail(data.results[0].avatar)      
-        .addField("Aoex Stats", "here is your stats~", true)      
+        .addField("Apex Stats", "here is your stats~", true)      
         .addBlankField(true)
         .addField("Username", `${data.results[0].name}`, true)
         .addField("Platform", `${data.results[0].platform}`, true)
