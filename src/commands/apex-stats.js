@@ -48,7 +48,7 @@ module.exports.run = (client, message, args) => {
       console.log(data.results[0].name);
       const embed = new Discord.RichEmbed()
         .setTitle("Apex User Lookup Result")     
-        .setColor(0x00AE86)       
+        .setColor(0xDA292A)       
         .setThumbnail(data.results[0].avatar)      
         .addField("Aoex Stats", "here is your stats~", true)      
         .addBlankField(true)

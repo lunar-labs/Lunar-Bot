@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async(client, message) => {
   const embed = {
-  "title": "List of available commands",
+  "title": "Apex Legends - Champions",
   "color": 14297386,
   "thumbnail": {
     "url": "https://pbs.twimg.com/profile_images/1092213870649794560/E0beUB_u_400x400.jpg"
@@ -10,11 +10,11 @@ module.exports.run = async(client, message) => {
   "fields": [
     {
       "name": "Apex Legends",
-      "value": "`-apex-champions` returns a list of commands for champions\n`-apex-weapons` returns a list of commands for weapons\n`-apex-tip` returns a random tip\n`-apex-patches` returns patch notes commands\n`-apex-map` returns the map with loot location guide"
+      "value": "`Purple:` High-Tier Loot\n`Blue:` Mid-Tier Loot\n`Grey:` Low-Tier Loot\n`Green:` Respawn Beacon
     },
     {
-      "name": "Testing",
-      "value": "`-apex-stats` returns the players stats"
+      "name": "Map",
+      "value": "https://i.imgur.com/2uCn1yA.jpg"
     }
   ]
 };
@@ -29,8 +29,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "apex",
-  category: "Games",
+  name: "apex-map",
+  category: "Apex",
   description: "Apex Legends",
-  usage: "apex"
+  usage: "apex-map"
 };
