@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-const util = require("util");
 
 module.exports.run = async(client, message, args) => {
     try{
