@@ -5,6 +5,7 @@ if (process.version.slice(1).split(".")[0] < 8) throw new Error("Node 8.0.0 or h
 
 // Load up the discord.js library
 const Discord = require("discord.js");
+const DBL = require("dblapi.js");
 // We also load the rest of the things we need in this file:
 const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
@@ -16,6 +17,7 @@ const eco = require('discord-economy');
 // some might call it `cootchie`. Either way, when you see `client.something`,
 // or `bot.something`, this is what we're refering to. Your client.
 const client = new Discord.Client();
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NDI2NjkwOTc5NTIyMTUyMSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTUwOTY3MDg1fQ.xCCO0GsVSvGaO4TGRrKWlukD1B-5vmyASJEEGEWzWNc', client);
 client.eco = eco;
 // Here we load the config file that contains our token and our prefix values.
 client.config = require("./config.js");
@@ -68,7 +70,7 @@ const init = async () => {
     client.on(eventName, event.bind(null, client));
     delete require.cache[require.resolve(`./events/${file}`)];
   });
-
+    
   // Generate a cache of client permissions for pretty perms
   client.levelCache = {};
   for (let i = 0; i < client.config.permLevels.length; i++) {
@@ -78,7 +80,15 @@ const init = async () => {
 
   // Here we login the client.
   client.login(client.config.token);
-
+  
+  // Here we log successful post to DBL
+  dbl.on('posted', () => {
+  console.log('Server count posted!');
+  })
+  // Here we log failed post to DBL
+  dbl.on('error', e => {
+  console.log(`Oops! ${e}`);
+  })  
 // End top-level async/await function.
 };
 
