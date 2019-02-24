@@ -47,10 +47,11 @@ module.exports.run = (client, message, args) => {
       //var stats = ;
       console.log(data.results[0].name);
       const embed = new Discord.RichEmbed()
-        .setTitle("Apex User Lookup Result")     
+        .setTitle("Apex User Lookup Result")
+        .setDescription("Please note that we can only track of your current Legend & trackers equipped. Inaccurate values may depend on that.")
         .setColor(0xDA292A)       
         .setThumbnail(data.results[0].avatar)      
-        .addField("Aoex Stats", "here is your stats~", true)      
+        .addField("Apex Stats", "here is your stats~", true)      
         .addBlankField(true)
         .addField("Username", `${data.results[0].name}`, true)
         .addField("Platform", `${data.results[0].platform}`, true)

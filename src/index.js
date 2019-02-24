@@ -12,6 +12,9 @@ const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const EnmapLevel = require("enmap-level");
 const eco = require('discord-economy');
+const stopReacord = true;
+const reactionRoles = [];
+const definedReactionRole = null;
 
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
@@ -19,7 +22,9 @@ const eco = require('discord-economy');
 const client = new Discord.Client();
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NDI2NjkwOTc5NTIyMTUyMSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTUwOTY3MDg1fQ.xCCO0GsVSvGaO4TGRrKWlukD1B-5vmyASJEEGEWzWNc', client);
 client.eco = eco;
-// Here we load the config file that contains our token and our prefix values.
+client.definedReactionRole = definedReactionRole;
+client.reactionRoles = reactionRoles;
+client.stopReacord = stopReacord;
 client.config = require("./config.js");
 // client.config.token contains the bot's token
 // client.config.prefix contains the message prefix
