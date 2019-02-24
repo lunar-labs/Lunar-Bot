@@ -22,9 +22,10 @@ exports.run = (client, message, args, level) => {
       if (currentCategory !== cat) {
         output += `\n== ${cat} ==\n`;
         currentCategory = cat;
-      }
-      output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
+      }      
+      output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)}\n`;
     });
+    
     message.channel.send(output, {code:"asciidoc"});
   } else {
     // Show individual command's help.
