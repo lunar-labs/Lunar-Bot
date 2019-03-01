@@ -23,17 +23,20 @@ exports.run = (client, message, args, level) => {
         output += `\n== ${cat} ==\n`;
         currentCategory = cat;
       }      
-      output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)}\n`;
+      output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)}:: ${c.help.description}\n`;
     });
     
-    message.channel.send(output, {code:"asciidoc"});
+      
+      message.author.send(output, {code:"asciidoc", split:"true"}).then(message => console.log("Help Command Used!")).catch(console.error);
+      message.channel.send("Help is on the way!").then(message => message.edit("Help Sent!")).catch(console.error);
+    
   } else {
     // Show individual command's help.
     let command = args[0];
     if (client.commands.has(command)) {
       command = client.commands.get(command);
       if (level < client.levelCache[command.conf.permLevel]) return;
-      message.channel.send(`= ${command.help.name} = \n${command.help.description}\nusage::${command.help.usage}`, {code:"asciidoc"});
+      message.author.send(`= ${command.help.name} = \n${command.help.description}\nusage::${command.help.usage}`, {code:"asciidoc"});
     }
   }
 };

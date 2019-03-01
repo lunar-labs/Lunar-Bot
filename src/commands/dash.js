@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message) => {
-    return message.channel.send(`You can the visit the dash here: ${client.config.WEBSITE_URL}`);
+    return message.channel.send(`You can the visit the dash here: ${client.config.dashboard.domain}`);
 
 };
 

@@ -9,22 +9,49 @@ const client = new Discord.Client();
 client.config = require("./config.js");
 const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
+const mysql = require("mysql");
 const Enmap = require("enmap");
 const EnmapLevel = require("enmap-level");
 const eco = require('discord-economy');
 const stopReacord = true;
 const reactionRoles = [];
 const definedReactionRole = null;
-const DBL = require("dblapi.js");
-const dbl = new DBL(client.config.dbl, client);
-// dbl.webhook.on('vote', vote => {
-//   console.log(`User with ID ${vote.user} just voted!`);
-  
-// });
-// This is your client. Some people call it `bot`, some people call it `self`,
-// some might call it `cootchie`. Either way, when you see `client.something`,
-// or `bot.something`, this is what we're refering to. Your client.
+client.con = mysql.createConnection({
+  host: client.config.mysqlh,
+   user: client.config.mysqlu,
+    password: client.config.mysqlp, database: client.config.mysqldb, port: client.config.mysqlpor});
 
+// con.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+//   var sql = "CREATE TABLE votes (id INT AUTO_INCREMENT PRIMARY KEY, userid VARCHAR(255), time VARCHAR(255))";
+//   con.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("Result: " + result);
+//   });
+// });
+const DBL = require("dblapi.js");
+const dbl = new DBL(client.config.dbl, { webhookPort: 5000, webhookAuth: 'example' }, client);
+dbl.webhook.on('ready', hook => {
+  console.log(`Webhook running at http://lunar-labs.io:${hook.port}${hook.path}`);
+  
+});
+dbl.webhook.on('vote', vote => {
+  console.log(`User with ID ${vote.user} just voted!`);
+  var update = client.channels.get("549024094360829962");
+  var user = client.users.get(`${vote.user}`);
+  client.con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    var hours = (new Date()).getHours();
+    var sql = "INSERT INTO votes (userid, time) VALUES ('"+vote.user+"','"+hours+"')";
+    client.con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("User Has Voted!");
+    });
+  });
+  update.send("User "+ user.tag+ " Has Voted");
+});
 client.eco = eco;
 client.definedReactionRole = definedReactionRole;
 client.reactionRoles = reactionRoles;

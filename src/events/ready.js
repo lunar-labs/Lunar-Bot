@@ -1,7 +1,11 @@
 module.exports = async (client) => {
 
   await client.wait(1000);
-
+  const DBL = require("dblapi.js");
+  const dbl = new DBL(client.config.dbl, client);
+  setInterval(() => {
+    dbl.postStats(client.guilds.size);
+}, 1800000);
   client.appInfo = await client.fetchApplication();
   setInterval( async () => {
     client.appInfo = await client.fetchApplication();
